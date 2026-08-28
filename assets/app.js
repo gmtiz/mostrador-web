@@ -10,15 +10,15 @@ const CONFIG = {
   // Pegá acá el endpoint de Formspree (formspree.io, plan gratis: 50 envíos/mes).
   // Si lo dejás vacío, los formularios abren el correo del visitante con el
   // mensaje ya escrito: la web funciona igual desde el minuto cero.
-  endpointFormulario: '',
+  endpointFormulario: 'https://formspree.io/f/xgaeeqnp',
 
-  email: 'hola@mostrador.com.ar',
+  email: 'gonzalomtizon@gmail.com',
   whatsapp: '541132113105',        // código de país + área, sin + ni espacios
   instagram: 'https://instagram.com/tu_usuario',
   tiktok: 'https://tiktok.com/@tu_usuario',
 
   // Subí el instalador a GitHub Releases y pegá acá el enlace directo.
-  descarga: 'descargas/Mostrador-Prueba-Windows.exe'
+  descarga: 'https://github.com/gmtiz/mostrador-web/releases/download/v1.0.0-prueba/Mostrador.zip'
 };
 
 /* ─────────────────────────────────────────────────────────────

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mostrador — El sistema de stock y ventas para tu negocio. Pago único, sin abono.</title>
+<meta name="description" content="Programa de escritorio para el stock, las ventas y la caja de tu comercio. Sin abono y sin internet: los datos quedan en tu PC. Probalo gratis 15 días.">
+<meta name="theme-color" content="#1E3A2E">
+<link rel="canonical" href="https://mostrador.com.ar/">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Mostrador">
+<meta property="og:title" content="Mostrador — stock, ventas y caja para tu negocio">
+<meta property="og:description" content="Pago único, sin abono mensual. Funciona sin internet y los datos quedan en tu computadora. Probalo gratis 15 días.">
+<meta property="og:url" content="https://mostrador.com.ar/">
+<meta property="og:image" content="https://mostrador.com.ar/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="stylesheet" href="assets/estilos.css">
+<link rel="preload" as="image" href="assets/img/dashboard.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Mostrador",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows 10, Windows 11, macOS, Linux",
+  "description": "Programa de escritorio para gestión de stock, ventas, compras y caja en comercios minoristas. Licencia de pago único, funciona sin conexión a internet.",
+  "url": "https://mostrador.com.ar/",
+  "softwareVersion": "1.0.0",
+  "inLanguage": "es-AR",
+  "offers": {
+    "@type": "Offer",
+    "price": "89000",
+    "priceCurrency": "ARS",
+    "availability": "https://schema.org/InStock",
+    "url": "https://mostrador.com.ar/#precios"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<!-- ══════════════════ BARRA ══════════════════ -->
+<header class="barra" id="barra">
+  <div class="contenedor barra-in">
+    <a class="logo" href="#" aria-label="Mostrador, inicio">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18l-1.2 11.2a2 2 0 0 1-2 1.8H6.2a2 2 0 0 1-2-1.8L3 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+      <span>Mostrador</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#funciones">Funciones</a>
+      <a href="#recorrido">Cómo se ve</a>
+      <a href="#rubros">Para qué rubros</a>
+      <a href="#precios">Precios</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+      <a class="btn btn-chico" href="#descarga">Probar gratis</a>
+    </nav>
+    <button class="hamburguesa" id="hamburguesa" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <div class="contenedor hero-in">
+    <div class="hero-texto revelar">
+      <p class="pastilla">Pago único · Sin abono mensual · Anda sin internet</p>
+      <h1>Tu negocio ordenado,<br>sin depender de nadie.</h1>
+      <p class="bajada">
+        Mostrador es un programa para tu computadora que lleva el stock, las ventas,
+        las compras y la caja de tu comercio. Se instala en cinco minutos, funciona
+        aunque se corte internet y los datos quedan en tu máquina, no en la nube de otro.
+      </p>
+      <div class="botonera">
+        <a class="btn btn-grande" href="#descarga">Descargar la prueba gratis</a>
+        <a class="btn btn-fantasma btn-grande" href="#precios">Ver precios</a>
+      </div>
+      <p class="letra-chica">15 días de prueba · No pide tarjeta · Un solo programa: se activa con una clave</p>
+    </div>
+    <figure class="hero-figura revelar">
+      <img src="assets/img/dashboard.jpg" width="1420" height="900"
+           alt="Panel principal de Mostrador con las ventas del día, el valor del stock y los productos a reponer" fetchpriority="high">
+      <figcaption>El panel al abrir el programa. Todo lo que necesitás saber, de un vistazo.</figcaption>
+    </figure>
+  </div>
+  <div class="tira-confianza">
+    <div class="contenedor tira-in">
+      <span><b>Sin abono.</b> Lo pagás una vez y es tuyo</span>
+      <span><b>Sin internet.</b> Vende igual si se cae la conexión</span>
+      <span><b>Tus datos.</b> Un archivo en tu PC que podés copiar</span>
+      <span><b>En castellano.</b> Pensado para el comercio argentino</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PROBLEMA ══════════════════ -->
+<section class="seccion" id="problema">
+  <div class="contenedor angosto centro">
+    <h2 class="revelar">Si llevás el negocio a cuaderno o Excel, esto ya te pasó</h2>
+    <div class="dolores">
+      <div class="dolor revelar"><b>«¿Cuánto me queda de esto?»</b>
+        Vas al depósito a mirar porque la planilla nunca está al día.</div>
+      <div class="dolor revelar"><b>«¿Este producto me deja algo?»</b>
+        Vendés hace meses algo que, con el costo de hoy, te deja pérdida.</div>
+      <div class="dolor revelar"><b>«¿Cerró la caja?»</b>
+        Faltan dos mil pesos y no hay forma de saber de qué turno salieron.</div>
+      <div class="dolor revelar"><b>«¿Cuánto le debo al proveedor?»</b>
+        La respuesta está en un papel arriba de la heladera.</div>
+      <div class="dolor revelar"><b>Aumentó el proveedor.</b>
+        Y ahora hay que retocar ciento veinte precios a mano, uno por uno.</div>
+      <div class="dolor revelar"><b>Se rompió la computadora.</b>
+        Y con ella se fue el único Excel donde estaba todo.</div>
+    </div>
+    <p class="cierre-seccion revelar">
+      Mostrador resuelve las seis. No es un ERP que tenés que aprender durante un mes:
+      es un mostrador digital que tu empleado entiende el primer día.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ FUNCIONES ══════════════════ -->
+<section class="seccion fondo-claro" id="funciones">
+  <div class="contenedor">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Qué hace</p>
+      <h2>Todo lo que hoy tenés desparramado, en un solo programa</h2>
+      <p class="bajada-seccion">Nueve secciones que cubren el día completo del negocio, desde que abrís hasta que cerrás la caja.</p>
+    </header>
+
+    <div class="grilla-funciones">
+      <article class="tarjeta revelar">
+        <span class="icono verde">
+          <svg viewBox="0 0 24 24"><path d="M3 5h2l2.5 10h10L20 7H6"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg>
+        </span>
+        <h3>Punto de venta rápido</h3>
+        <p>Pasás el lector y listo. Buscá por nombre o código, cargá varias unidades con
+        <code>3*</code> antes del código, aplicá descuentos y cobrá con F5. El vuelto se calcula solo
+        y el ticket sale por la ticketera de 58 u 80 mm.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono azul">
+          <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Z"/><path d="M3 7l9 5 9-5"/><path d="M12 12v10"/></svg>
+        </span>
+        <h3>Stock que se descuenta solo</h3>
+        <p>Cada venta baja el stock, cada compra lo sube. Alertas de mínimo, control de
+        vencimientos, ubicación en góndola y venta por kilo o por unidad. Nunca más ir al
+        depósito a contar.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono miel">
+          <svg viewBox="0 0 24 24"><path d="M2 8h11v8H2z"/><path d="M13 11h4l4 3v2h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+        </span>
+        <h3>Compras con costo promedio</h3>
+        <p>Cargás lo que trajo el proveedor y el costo se recalcula como promedio ponderado —
+        el número real, no el de la última factura. Si querés, los precios de venta se
+        reajustan solos manteniendo tu margen.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono ladrillo">
+          <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/></svg>
+        </span>
+        <h3>Aumento masivo de precios</h3>
+        <p>Llegó la lista nueva y subió todo un 12%. Elegís el rubro, la marca o el proveedor,
+        ponés el porcentaje, redondeás a múltiplos de 10 y ves la previsualización antes de
+        confirmar. Dos minutos en vez de dos horas.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono verde">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>
+        </span>
+        <h3>Caja con arqueo y cierre</h3>
+        <p>Abrís con el fondo inicial, registrás ingresos y retiros, y al cerrar el programa te
+        dice cuánto debería haber en el cajón y cuánto contaste. La diferencia queda anotada
+        con nombre y hora.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono azul">
+          <svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg>
+        </span>
+        <h3>Reportes que sirven para decidir</h3>
+        <p>Qué se vende, qué te deja plata y qué está durmiendo en la góndola desde hace dos
+        meses. Rentabilidad por producto y por rubro, stock valorizado a costo y a venta,
+        productos por vencer. Todo se exporta a Excel.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono miel">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="18" cy="9" r="2.4"/><path d="M16 20a5 5 0 0 1 6-4.6"/></svg>
+        </span>
+        <h3>Fiado que no se olvida</h3>
+        <p>Cuenta corriente de clientes y proveedores con límite de crédito. Sabés quién te
+        debe, cuánto y desde cuándo, y cuánto le debés vos a cada distribuidor. Cobros y pagos
+        con su historial completo.</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono ladrillo">
+          <svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M6 8h12"/><path d="M8 13h8"/><path d="M9 18h6"/></svg>
+        </span>
+        <h3>Historial de cada movimiento</h3>
+        <p>El kardex completo: cada entrada y salida, con el stock antes y después, el motivo
+        y quién la hizo. Mermas, roturas, devoluciones y ajustes quedan justificados. Se acabó
+        el «no sé dónde fueron a parar».</p>
+      </article>
+
+      <article class="tarjeta revelar">
+        <span class="icono verde">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v14H7l-3 3V4Z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+        </span>
+        <h3>Usuarios con permisos</h3>
+        <p>El vendedor vende, consulta y maneja la caja. Los precios, las compras y los
+        reportes los ve sólo el dueño. Cada acción queda registrada con nombre y hora en el
+        historial de actividad.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RECORRIDO ══════════════════ -->
+<section class="seccion" id="recorrido">
+  <div class="contenedor">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Cómo se ve</p>
+      <h2>Capturas reales del programa, sin maquillaje</h2>
+      <p class="bajada-seccion">Ninguna es un render. Es exactamente lo que vas a ver al instalarlo.</p>
+    </header>
+
+    <div class="pestanas revelar">
+      <div class="pestanas-botones" role="tablist">
+        <button role="tab" class="activa" data-panel="p-vender">Vender</button>
+        <button role="tab" data-panel="p-productos">Productos</button>
+        <button role="tab" data-panel="p-compras">Compras</button>
+        <button role="tab" data-panel="p-reportes">Reportes</button>
+        <button role="tab" data-panel="p-caja">Caja</button>
+        <button role="tab" data-panel="p-movimientos">Movimientos</button>
+        <button role="tab" data-panel="p-clientes">Clientes</button>
+      </div>
+
+      <div class="pestanas-paneles">
+        <div class="panel activo" id="p-vender">
+          <img src="assets/img/pos.jpg" width="1420" height="900" loading="lazy" alt="Pantalla de venta de Mostrador con cuatro productos cargados en el ticket y el total de la compra">
+          <div class="panel-texto">
+            <h3>Vender</h3>
+            <p>El ticket en curso se dibuja como una tira de papel térmico, con los números en
+            tipografía monoespaciada para que las columnas queden alineadas. Todo se maneja con
+            el teclado: F2 buscar, F4 cliente, F5 cobrar, F8 vaciar.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-productos">
+          <img src="assets/img/productos.jpg" width="1420" height="900" loading="lazy" alt="Listado de productos con costo, precio, margen y valor del stock">
+          <div class="panel-texto">
+            <h3>Productos</h3>
+            <p>Costo, precio y margen enlazados: tocás uno y los otros se acomodan. Filtros por
+            rubro, marca y proveedor, y selección múltiple para dar de baja o actualizar precios
+            en lote. Los que hay que reponer se marcan en color.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-compras">
+          <img src="assets/img/compras.jpg" width="1420" height="900" loading="lazy" alt="Listado de compras a proveedores con su estado de pago">
+          <div class="panel-texto">
+            <h3>Compras</h3>
+            <p>Cada remito que entra actualiza el stock y el costo promedio. Las que quedaron
+            impagas se marcan y suman a la cuenta del proveedor, así siempre sabés cuánto debés
+            y a quién.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-reportes">
+          <img src="assets/img/reportes.jpg" width="1420" height="900" loading="lazy" alt="Reportes de ventas por día con facturado, ganancia y margen">
+          <div class="panel-texto">
+            <h3>Reportes</h3>
+            <p>Ventas por día, más vendidos, rentabilidad por producto o rubro, medios de pago,
+            stock valorizado, productos por vencer y mercadería sin movimiento. Elegís el período
+            y exportás a Excel.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-caja">
+          <img src="assets/img/caja.jpg" width="1420" height="900" loading="lazy" alt="Sección de caja con el arqueo del turno">
+          <div class="panel-texto">
+            <h3>Caja</h3>
+            <p>Apertura con fondo inicial, ingresos y egresos del turno, y el arqueo en vivo:
+            cuánto debería haber en el cajón ahora mismo. Al cerrar queda el registro con la
+            diferencia entre el sistema y lo que contaste.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-movimientos">
+          <img src="assets/img/movimientos.jpg" width="1420" height="900" loading="lazy" alt="Historial de movimientos de stock con motivo y usuario">
+          <div class="panel-texto">
+            <h3>Movimientos</h3>
+            <p>Cada unidad que entró y salió, con el stock antes y después. Si falta mercadería,
+            acá está la respuesta: quién la tocó, cuándo y por qué.</p>
+          </div>
+        </div>
+        <div class="panel" id="p-clientes">
+          <img src="assets/img/contactos.jpg" width="1420" height="900" loading="lazy" alt="Clientes y proveedores con su cuenta corriente">
+          <div class="panel-texto">
+            <h3>Clientes y proveedores</h3>
+            <p>La libreta del fiado, ordenada. Saldo por cliente, límite de crédito, y el detalle
+            de cada compra y cada pago con fecha.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dos-columnas revelar">
+      <div class="mini-tarjeta">
+        <img class="mini-ticket" src="assets/img/ticket.jpg" width="473" height="834" loading="lazy" alt="Ticket de 80 milímetros impreso por Mostrador, con el detalle de la compra y el total">
+        <div>
+          <h3>Tickets de verdad</h3>
+          <p>Sale por cualquier ticketera térmica de 58 u 80 mm, o en A4 si todavía no tenés una.
+          Con el nombre, el CUIT y la dirección de tu negocio. Si no hay impresora conectada, lo
+          guarda en PDF.</p>
+        </div>
+      </div>
+      <div class="mini-tarjeta">
+        <img src="assets/img/oscuro.jpg" width="1420" height="900" loading="lazy" alt="El programa en modo oscuro">
+        <div>
+          <h3>Modo oscuro para el turno noche</h3>
+          <p>La misma pantalla, en oscuro, para los que cierran a las dos de la mañana. Se cambia
+          desde Ajustes con un clic.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RUBROS ══════════════════ -->
+<section class="seccion fondo-claro" id="rubros">
+  <div class="contenedor">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Para quién es</p>
+      <h2>Pensado para el comercio de barrio</h2>
+      <p class="bajada-seccion">Si vendés mercadería en un mostrador, Mostrador es para vos.</p>
+    </header>
+    <div class="grilla-rubros">
+      <div class="rubro revelar"><h3>Almacenes y minimercados</h3><p>Cientos de códigos, proveedores distintos y aumentos cada dos semanas. El aumento masivo por proveedor te devuelve la tarde.</p></div>
+      <div class="rubro revelar"><h3>Kioscos y polirrubros</h3><p>Muchas ventas chicas y rápidas. El lector de códigos y el cobro con F5 hacen que la cola no se arme.</p></div>
+      <div class="rubro revelar"><h3>Fiambrerías y rotiserías</h3><p>Venta por kilo con decimales, control de vencimientos y alertas de mermas para lo que se pone feo.</p></div>
+      <div class="rubro revelar"><h3>Ferreterías y pinturerías</h3><p>Miles de artículos con proveedor habitual y ubicación en góndola. Buscar por nombre encuentra el bulón que nadie recuerda dónde está.</p></div>
+      <div class="rubro revelar"><h3>Perfumerías y regalerías</h3><p>Márgenes distintos por rubro y mucha mercadería inmovilizada. El reporte de rentabilidad te muestra qué conviene reponer.</p></div>
+      <div class="rubro revelar"><h3>Verdulerías y dietéticas</h3><p>Precio por kilo, vencimientos cortos y proveedores que cambian de precio todas las semanas.</p></div>
+      <div class="rubro revelar"><h3>Distribuidoras chicas</h3><p>Cuenta corriente de clientes con límite de crédito, y control de lo que le debés a cada fábrica.</p></div>
+      <div class="rubro revelar"><h3>Depósitos y talleres</h3><p>Si sólo necesitás saber qué entró, qué salió y qué queda, con el kardex y los ajustes te alcanza.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ COMPARATIVA ══════════════════ -->
+<section class="seccion" id="comparativa">
+  <div class="contenedor angosto">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Por qué Mostrador</p>
+      <h2>Contra el Excel y contra los sistemas por abono</h2>
+    </header>
+    <div class="tabla-envoltorio revelar">
+      <table class="comparativa">
+        <thead>
+          <tr><th>&nbsp;</th><th>Cuaderno o Excel</th><th>Sistema en la nube</th><th class="destacada">Mostrador</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Qué pagás</td><td>Nada</td><td>Abono todos los meses, para siempre</td><td class="destacada">Una sola vez</td></tr>
+          <tr><td>Si se corta internet</td><td>Seguís</td><td>No podés vender</td><td class="destacada">Seguís vendiendo</td></tr>
+          <tr><td>Dónde están tus datos</td><td>En tu PC</td><td>En un servidor de otro país</td><td class="destacada">En tu PC, en un archivo que copiás</td></tr>
+          <tr><td>Stock actualizado</td><td>Si te acordás de anotarlo</td><td>Sí</td><td class="destacada">Solo, con cada venta</td></tr>
+          <tr><td>Costo promedio real</td><td>No</td><td>A veces</td><td class="destacada">Sí, ponderado</td></tr>
+          <tr><td>Aumentar precios en lote</td><td>Uno por uno</td><td>Según el plan</td><td class="destacada">Por rubro, marca o proveedor</td></tr>
+          <tr><td>Si dejás de pagar</td><td>—</td><td>Perdés el acceso a tus datos</td><td class="destacada">Sigue funcionando igual</td></tr>
+          <tr><td>Cómo se activa</td><td>—</td><td>Usuario y contraseña, siempre en línea</td><td class="destacada">Una clave que se pega una vez</td></tr>
+          <tr><td>Cuánto tarda en andar</td><td>—</td><td>Implementación y capacitación</td><td class="destacada">Cinco minutos</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PRECIOS ══════════════════ -->
+<section class="seccion fondo-claro" id="precios">
+  <div class="contenedor">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Precios</p>
+      <h2>Lo pagás una vez. Después es tuyo.</h2>
+      <p class="bajada-seccion">Sin abono, sin renovación, sin sorpresas. La licencia no vence nunca.</p>
+    </header>
+
+    <div class="grilla-precios">
+      <article class="plan revelar">
+        <h3>Mostrador</h3>
+        <p class="plan-para">Para un negocio, una computadora.</p>
+        <p class="precio"><span class="moneda">$</span>89.000 <span class="unidad">pago único</span></p>
+        <ul class="lista-tildes">
+          <li>Todas las funciones, sin recortes</li>
+          <li>Licencia para 1 computadora, sin vencimiento</li>
+          <li>Usuarios ilimitados dentro de esa PC</li>
+          <li>Productos, ventas y clientes sin tope</li>
+          <li>Actualizaciones de la versión 1.x incluidas</li>
+          <li>Soporte por WhatsApp durante 3 meses</li>
+        </ul>
+        <a class="btn btn-fantasma bloque" href="#contacto" data-plan="Mostrador (1 PC)">Lo quiero</a>
+      </article>
+
+      <article class="plan destacado revelar">
+        <p class="etiqueta-plan">El que más eligen</p>
+        <h3>Mostrador Negocio</h3>
+        <p class="plan-para">Para el que tiene caja y oficina, o dos locales.</p>
+        <p class="precio"><span class="moneda">$</span>139.000 <span class="unidad">pago único</span></p>
+        <ul class="lista-tildes">
+          <li>Todo lo del plan anterior</li>
+          <li>Licencia para 3 computadoras (una clave por equipo)</li>
+          <li>Carga inicial de tu catálogo desde tu planilla</li>
+          <li>Una videollamada de puesta en marcha</li>
+          <li>Soporte por WhatsApp durante 12 meses</li>
+          <li>Prioridad en el pedido de nuevas funciones</li>
+        </ul>
+        <a class="btn bloque" href="#contacto" data-plan="Mostrador Negocio (3 PC)">Lo quiero</a>
+      </article>
+
+      <article class="plan revelar">
+        <h3>A medida</h3>
+        <p class="plan-para">Si necesitás algo que hoy no está.</p>
+        <p class="precio precio-consultar">A convenir</p>
+        <ul class="lista-tildes">
+          <li>Funciones hechas para tu rubro</li>
+          <li>Integración con tu balanza o tu lector</li>
+          <li>Migración desde tu sistema actual</li>
+          <li>Reportes propios</li>
+          <li>Presupuesto cerrado antes de empezar</li>
+        </ul>
+        <a class="btn btn-fantasma bloque" href="#contacto" data-plan="Desarrollo a medida">Charlemos</a>
+      </article>
+    </div>
+
+    <div class="garantia revelar">
+      <div>
+        <h3>Probalo antes de pagar, y después probalo un mes más</h3>
+        <p>La prueba de 15 días es gratis y completa. Y si comprás y en los primeros 30 días
+        ves que no es para vos, te devuelvo el dinero sin preguntas. El riesgo lo corro yo,
+        no vos.</p>
+      </div>
+      <a class="btn btn-grande" href="#descarga">Empezar la prueba</a>
+    </div>
+    <p class="letra-chica centro">Precios en pesos argentinos, IVA incluido. Se factura al concretar la compra.</p>
+  </div>
+</section>
+
+<!-- ══════════════════ DESCARGA ══════════════════ -->
+<section class="seccion oscura" id="descarga">
+  <div class="contenedor angosto centro">
+    <p class="rotulo claro revelar">Prueba gratuita</p>
+    <h2 class="revelar">Descargalo y probalo con tu propia mercadería</h2>
+    <p class="bajada-seccion claro revelar">
+      Es el programa completo, no un video ni una demo guiada. Trae un negocio de ejemplo
+      cargado para que puedas recorrerlo sin tipear nada, y con un clic lo dejás vacío
+      para empezar con tu propia mercadería.
+    </p>
+
+    <div class="botonera centro revelar">
+      <a class="btn btn-grande btn-claro" id="btn-descarga" href="descargas/Mostrador-Prueba-Windows.exe" download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+        Descargar para Windows
+      </a>
+      <a class="btn btn-fantasma-claro btn-grande" href="#contacto">Necesito la versión de Mac o Linux</a>
+    </div>
+    <p class="letra-chica claro">Windows 10 y 11 · 38 MB · No requiere instalar nada más</p>
+
+    <div class="limites revelar">
+      <div>
+        <h3>Qué incluye la prueba</h3>
+        <ul class="lista-tildes claro">
+          <li>Las nueve secciones completas</li>
+          <li>Hasta 60 ventas y 20 compras</li>
+          <li>Hasta 30 productos y 15 clientes</li>
+          <li>15 días desde el primer arranque</li>
+          <li>Los comprobantes salen con la leyenda «versión de prueba»</li>
+        </ul>
+        <p class="letra-chica claro">La actualización masiva de precios y la importación
+        desde planilla se habilitan al activar.</p>
+      </div>
+      <div>
+        <h3>Es un solo programa</h3>
+        <p>No hay dos descargas. Cuando comprás te mandamos una clave, la pegás en
+        Ajustes y el mismo programa que venías usando se desbloquea al instante.</p>
+        <p><b>Tu base de datos no se toca:</b> seguís con tus productos, tus clientes y
+        tu historial. No hay que reinstalar ni cargar nada de nuevo.</p>
+      </div>
+    </div>
+
+    <div class="pasos-activacion revelar">
+      <div><span class="numero">1</span><p>Nos pasás el <b>código de tu computadora</b>,
+        que el programa te muestra en Ajustes.</p></div>
+      <div><span class="numero">2</span><p>Te mandamos la <b>clave</b> por WhatsApp,
+        el mismo día del pago.</p></div>
+      <div><span class="numero">3</span><p>La pegás y <b>listo</b>. Treinta segundos,
+        sin desinstalar nada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ INSTALACIÓN ══════════════════ -->
+<section class="seccion" id="instalacion">
+  <div class="contenedor angosto">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Puesta en marcha</p>
+      <h2>De la descarga a la primera venta, en tres pasos</h2>
+    </header>
+    <ol class="pasos">
+      <li class="revelar"><span class="numero">1</span>
+        <div><h3>Descargás y abrís</h3>
+        <p>Un solo archivo. No pide instalar Java, ni .NET, ni base de datos, ni configurar
+        nada en el router. Doble clic y está andando.</p></div></li>
+      <li class="revelar"><span class="numero">2</span>
+        <div><h3>Cargás tu mercadería</h3>
+        <p>A mano, o de una vez desde tu planilla de Excel si ya la tenés armada. Podés
+        arrancar con los veinte productos que más vendés y sumar el resto sobre la marcha.</p></div></li>
+      <li class="revelar"><span class="numero">3</span>
+        <div><h3>Empezás a vender</h3>
+        <p>Abrís la caja, pasás el lector y cobrás. El stock se descuenta solo y a la noche
+        cerrás el turno con el arqueo. Eso es todo.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════ SUGERENCIAS ══════════════════ -->
+<section class="seccion fondo-claro" id="sugerencias">
+  <div class="contenedor">
+    <div class="dos-mitades">
+      <div class="revelar">
+        <p class="rotulo">Buzón de sugerencias</p>
+        <h2>El programa lo terminan de escribir los que lo usan</h2>
+        <p>Mostrador no lo hizo un comité: lo hice mirando cómo trabaja gente que atiende un
+        mostrador todos los días. Si algo te falta, te sobra o te resulta incómodo, quiero
+        saberlo.</p>
+        <p>Leo todo lo que llega. Las sugerencias que se repiten entran en la próxima versión,
+        y si sos cliente te aviso cuando la función que pediste está lista.</p>
+        <ul class="lista-tildes">
+          <li>¿Qué función te está faltando?</li>
+          <li>¿Qué parte te resultó confusa?</li>
+          <li>¿Qué hacés hoy en papel que te gustaría hacer acá?</li>
+        </ul>
+      </div>
+
+      <form class="formulario revelar" id="form-sugerencias" novalidate>
+        <h3>Contame qué mejorarías</h3>
+        <label>Tu nombre
+          <input type="text" name="nombre" required autocomplete="name" placeholder="Cómo te llamás">
+        </label>
+        <label>Tu email <span class="opcional">(para avisarte cuando esté)</span>
+          <input type="email" name="email" autocomplete="email" placeholder="vos@tunegocio.com.ar">
+        </label>
+        <label>¿De qué se trata?
+          <select name="tipo">
+            <option>Me falta una función</option>
+            <option>Encontré un error</option>
+            <option>Algo me resultó confuso</option>
+            <option>Idea para mi rubro</option>
+            <option>Otra cosa</option>
+          </select>
+        </label>
+        <label>Tu sugerencia
+          <textarea name="mensaje" rows="5" required placeholder="Escribilo como te salga, sin formalidades."></textarea>
+        </label>
+        <button class="btn bloque" type="submit">Enviar sugerencia</button>
+        <p class="estado-form" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PREGUNTAS ══════════════════ -->
+<section class="seccion" id="preguntas">
+  <div class="contenedor angosto">
+    <header class="cabecera-seccion revelar">
+      <p class="rotulo">Preguntas</p>
+      <h2>Lo que todos preguntan antes de comprar</h2>
+    </header>
+
+    <div class="acordeon revelar">
+      <details>
+        <summary>¿Emite factura electrónica de ARCA (ex AFIP)?</summary>
+        <p>No, y prefiero decírtelo antes de que pagues. Mostrador emite comprobantes internos:
+        el ticket que le das al cliente y tu control de caja. Si necesitás factura A o B
+        electrónica, tenés que seguir usando el portal de ARCA o el sistema de tu contador.
+        La integración con ARCA está en la lista de lo que viene, y si es indispensable para
+        vos, escribime y te aviso apenas esté.</p>
+      </details>
+      <details>
+        <summary>¿Anda sin internet?</summary>
+        <p>Sí, siempre. El programa y los datos están en tu computadora. Internet sólo hace falta
+        para descargarlo la primera vez. Si se corta la conexión en el barrio, vos seguís
+        vendiendo como si nada.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa si se rompe la computadora?</summary>
+        <p>Toda la información vive en un solo archivo. El programa hace una copia automática
+        cada vez que lo cerrás, y podés forzar una con Ctrl+B. Copiás ese archivo a un pendrive
+        o a Drive y estás cubierto: en la máquina nueva, instalás Mostrador, pegás el archivo
+        y está todo como lo dejaste.</p>
+      </details>
+      <details>
+        <summary>¿Necesito un lector de código de barras?</summary>
+        <p>No, pero ayuda. Sin lector buscás por nombre o por código interno y funciona igual.
+        Si querés comprar uno, cualquier lector USB común anda: la computadora los ve como un
+        teclado y no hay que configurar nada.</p>
+      </details>
+      <details>
+        <summary>¿Sirve para vender por kilo?</summary>
+        <p>Sí. Cada producto se define por unidad o por kilo, y las cantidades aceptan decimales
+        (0,350 kg de jamón, por ejemplo). Todavía no lee la balanza directamente: el peso lo
+        escribís vos.</p>
+      </details>
+      <details>
+        <summary>¿Puedo usarlo en dos computadoras a la vez?</summary>
+        <p>La licencia Negocio cubre tres máquinas, pero cada una lleva su propia base de datos:
+        hoy no sincronizan entre sí en tiempo real. Si necesitás dos cajas trabajando sobre el
+        mismo stock al mismo tiempo, escribime y lo vemos, porque es la función que más me están
+        pidiendo.</p>
+      </details>
+      <details>
+        <summary>¿Cuánto tarda en aprender a usarlo un empleado?</summary>
+        <p>Una tarde. La pantalla de vender es la única que necesita para trabajar, y son tres
+        teclas. Los precios, las compras y los reportes se los reservás vos con el usuario de
+        administrador.</p>
+      </details>
+      <details>
+        <summary>¿Qué pasa cuando salga la versión 2?</summary>
+        <p>Las actualizaciones de la línea 1.x son gratis para siempre. Si algún día hay una
+        versión 2 con cambios grandes, vas a tener un precio de actualización preferencial, y tu
+        versión 1 va a seguir funcionando aunque no la actualices. Nunca voy a apagarte el
+        programa que ya pagaste.</p>
+      </details>
+      <details>
+        <summary>¿Cómo hago para pasar de la prueba a la versión completa?</summary>
+        <p>No hay que descargar nada de nuevo. Es el mismo programa: abrís Ajustes →
+        Licencia, ahí te muestra el código de tu computadora, nos lo pasás y te mandamos
+        la clave. La pegás, tocás Activar y en el acto se levantan todos los topes. Tus
+        productos, tus ventas y tu historial quedan exactamente donde estaban.</p>
+      </details>
+      <details>
+        <summary>¿La clave sirve en cualquier computadora?</summary>
+        <p>No: cada clave se genera para una máquina en particular, a partir de su
+        hardware. Por eso el plan de tres equipos son tres claves, una por computadora.
+        Si intentás usar la de una máquina en otra, el programa te lo avisa y te sigue
+        funcionando en modo prueba.</p>
+      </details>
+      <details>
+        <summary>¿Y si cambio la computadora o le cambio una pieza?</summary>
+        <p>Si cambiás un disco o una placa de red, la licencia sigue andando: el programa
+        tolera que cambie una parte del equipo. Si cambiás la máquina entera, liberás la
+        licencia desde Ajustes en la vieja, nos pedís la clave nueva y te la mandamos
+        <b>sin cargo</b>. No hay límite de reinstalaciones ni contadores que se agoten.</p>
+      </details>
+      <details>
+        <summary>¿Necesito internet para activar?</summary>
+        <p>No. La activación es un ida y vuelta entre vos y yo por WhatsApp: el programa
+        nunca se conecta a ningún servidor. Podés activarlo en una computadora que jamás
+        vio internet.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se paga?</summary>
+        <p>Transferencia bancaria o Mercado Pago. Escribime por el formulario o por WhatsApp,
+        te paso los datos y la factura, y en el mismo día te mando el instalador de la versión
+        completa.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACTO ══════════════════ -->
+<section class="seccion fondo-claro" id="contacto">
+  <div class="contenedor">
+    <div class="dos-mitades">
+      <div class="revelar">
+        <p class="rotulo">Contacto</p>
+        <h2>¿Te queda alguna duda? Preguntá antes de pagar.</h2>
+        <p>Del otro lado no hay un centro de atención: contesto yo. Si me contás qué vendés y
+        cómo trabajás hoy, te digo derecho si Mostrador te sirve o si te conviene otra cosa.</p>
+
+        <div class="contactos-directos">
+          <a class="contacto-directo" id="link-whatsapp" href="https://wa.me/5491100000000">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.9 7L4 20l1.1-3.9A8 8 0 1 1 20 12Z"/></svg>
+            <span><b>WhatsApp</b><br>Lunes a sábado, de 9 a 20</span>
+          </a>
+          <a class="contacto-directo" id="link-email" href="mailto:hola@mostrador.com.ar">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span><b>hola@mostrador.com.ar</b><br>Respondo en el día</span>
+          </a>
+        </div>
+
+        <div class="redes">
+          <p class="rotulo">Seguime</p>
+          <div class="redes-botones">
+            <a class="red" id="link-instagram" href="https://instagram.com/" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a class="red" id="link-tiktok" href="https://tiktok.com/" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M15 6.5A4.5 4.5 0 0 0 19.5 9"/></svg>
+              <span>TikTok</span>
+            </a>
+          </div>
+          <p class="letra-chica">Subo trucos de uso, novedades de cada versión y casos reales de negocios que lo usan.</p>
+        </div>
+      </div>
+
+      <form class="formulario revelar" id="form-contacto" novalidate>
+        <h3>Escribime</h3>
+        <label>Tu nombre
+          <input type="text" name="nombre" required autocomplete="name" placeholder="Cómo te llamás">
+        </label>
+        <label>Tu negocio
+          <input type="text" name="negocio" autocomplete="organization" placeholder="Nombre y rubro">
+        </label>
+        <label>Email o teléfono
+          <input type="text" name="contacto" required placeholder="Por dónde te contesto">
+        </label>
+        <label>¿Qué necesitás?
+          <select name="motivo" id="select-motivo">
+            <option>Quiero comprar la licencia</option>
+            <option>Tengo una duda antes de probarlo</option>
+            <option>Necesito la versión de Mac o Linux</option>
+            <option>Quiero un desarrollo a medida</option>
+            <option>Soporte técnico</option>
+          </select>
+        </label>
+        <label>Contame
+          <textarea name="mensaje" rows="4" placeholder="Qué vendés, cuántos productos manejás, qué usás hoy."></textarea>
+        </label>
+        <button class="btn bloque" type="submit">Enviar consulta</button>
+        <p class="estado-form" role="status" aria-live="polite"></p>
+        <p class="letra-chica">Tus datos son para responderte, nada más. No hay lista de correo ni newsletter.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CIERRE ══════════════════ -->
+<section class="seccion cierre-final">
+  <div class="contenedor angosto centro">
+    <h2 class="revelar">El negocio ya lo tenés. Falta ordenarlo.</h2>
+    <p class="bajada-seccion revelar">Quince días gratis, sin tarjeta y sin compromiso. Si no te sirve, borrás el archivo y listo.</p>
+    <div class="botonera centro revelar">
+      <a class="btn btn-grande" href="#descarga">Descargar la prueba</a>
+      <a class="btn btn-fantasma btn-grande" href="#precios">Ver precios</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie-in">
+    <div>
+      <a class="logo" href="#">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8h18l-1.2 11.2a2 2 0 0 1-2 1.8H6.2a2 2 0 0 1-2-1.8L3 8Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+        <span>Mostrador</span>
+      </a>
+      <p class="letra-chica">Stock, ventas y caja para comercios chicos.<br>Hecho en Buenos Aires, Argentina.</p>
+    </div>
+    <nav class="pie-nav">
+      <a href="#funciones">Funciones</a>
+      <a href="#precios">Precios</a>
+      <a href="#descarga">Descargar</a>
+      <a href="#preguntas">Preguntas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="pie-redes">
+      <a href="https://instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://tiktok.com/" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M15 3v10.5a3.5 3.5 0 1 1-3-3.46"/><path d="M15 6.5A4.5 4.5 0 0 0 19.5 9"/></svg></a>
+    </div>
+  </div>
+  <div class="contenedor pie-legal">
+    <p class="letra-chica">© <span id="anio">2026</span> Mostrador. Todos los derechos reservados.
+    Mostrador emite comprobantes internos y no reemplaza la facturación electrónica de ARCA.</p>
+  </div>
+</footer>
+
+<!-- barra fija en celular -->
+<div class="barra-movil">
+  <a class="btn bloque" href="#descarga">Probar gratis 15 días</a>
+</div>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
